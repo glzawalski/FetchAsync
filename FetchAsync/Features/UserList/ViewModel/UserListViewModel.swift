@@ -9,7 +9,7 @@ import Foundation
 
 class UserListViewModel: ObservableObject {
     @Published var users = [User]()
-    @Injected(\.userListUseCase) var useCase: UseCaseProtol
+    @Injected(\.userListUseCase) var useCase: UserListUseCase
 
     func fetchData() async {
         let users = await useCase.fetchUsers()
